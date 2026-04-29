@@ -8,15 +8,14 @@ export class CreateUserDto {
   email: string ;
 
   @ApiProperty({ example: 'John Doe', required: false })
-  @IsOptional()
+  
   @IsString()
   @IsNotEmpty()
    @MinLength(3)
-  name?: string;
+  name: string;
 
   @ApiProperty({ example: 'Password@123' })
   @IsString()
-   @IsOptional()
   @IsNotEmpty()
   @MinLength(8)
   password: string;
@@ -25,5 +24,6 @@ export class CreateUserDto {
   @IsInt()
   @Min(1)
   @Max(120)
+  @IsOptional()
   age?: number;
 }

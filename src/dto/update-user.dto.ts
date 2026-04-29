@@ -7,17 +7,16 @@ export class UpdateUserDto {
   email: string;
 
   @ApiProperty({ example: 'John Doe', required: false })
-  @IsOptional()
   @IsString()
-  name?: string; 
+  name: string; 
 
   @IsString()
-   @IsOptional()
     password: string; 
 
   
   @IsInt()
-  @Min(1)
+  @Min(1) 
   @Max(120)
+  @IsOptional()
   age: number;
 }
