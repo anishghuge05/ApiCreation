@@ -19,5 +19,5 @@ model User {
   name  String?
   password String?
   age Int?
-  hobbie?
+  
 }
